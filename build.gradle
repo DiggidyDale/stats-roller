@@ -10,10 +10,6 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
-    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/PublicRepositories/" }
-    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/CDLRepositories/" }
-    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/squad3/edi/" }
-
 }
 
 dependencies {
