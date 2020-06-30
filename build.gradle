@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'uk.co.diggidydale'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/PublicRepositories/" }
+    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/CDLRepositories/" }
+    maven { url "http://nexus-operations.cheshdatasys.co.uk:8081/repository/squad3/edi/" }
+
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
